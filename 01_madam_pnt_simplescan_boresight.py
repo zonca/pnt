@@ -163,12 +163,9 @@ if __name__ == "__main__":
 
         signal[idet * nsamp : (idet + 1) * nsamp] = 2 + 1 * qw[det] + 3 * uw[det]
 
-    nperiod = 4  # number of pointing periods
+    nperiod = 1  # number of pointing periods
 
     periods = np.zeros(nperiod, dtype=np.int64)
-    periods[1] = int(nsamp * .25)
-    periods[2] = int(nsamp * .50)
-    periods[3] = int(nsamp * .75)
 
     npsd = np.ones(ndet, dtype=np.int64)
     npsdtot = np.sum(npsd)
